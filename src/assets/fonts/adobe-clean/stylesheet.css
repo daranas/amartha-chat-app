@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'Adobe Clean';
+	src: url('AdobeClean-Bold.eot');
+	src: url('AdobeClean-Bold.eot?#iefix') format('embedded-opentype'),
+		url('AdobeClean-Bold.woff2') format('woff2'),
+		url('AdobeClean-Bold.woff') format('woff'),
+		url('AdobeClean-Bold.ttf') format('truetype'),
+		url('AdobeClean-Bold.svg#AdobeClean-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Adobe Clean';
+	src: url('AdobeClean-Light.eot');
+	src: url('AdobeClean-Light.eot?#iefix') format('embedded-opentype'),
+		url('AdobeClean-Light.woff2') format('woff2'),
+		url('AdobeClean-Light.woff') format('woff'),
+		url('AdobeClean-Light.ttf') format('truetype'),
+		url('AdobeClean-Light.svg#AdobeClean-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Adobe Clean';
+	src: url('AdobeClean-Regular.eot');
+	src: url('AdobeClean-Regular.eot?#iefix') format('embedded-opentype'),
+		url('AdobeClean-Regular.woff2') format('woff2'),
+		url('AdobeClean-Regular.woff') format('woff'),
+		url('AdobeClean-Regular.ttf') format('truetype'),
+		url('AdobeClean-Regular.svg#AdobeClean-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

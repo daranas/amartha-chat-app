@@ -1,1 +1,1 @@
-# amartha-chat-app
+# Amartha Chat App

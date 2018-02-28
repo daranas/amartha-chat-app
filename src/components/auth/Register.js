@@ -46,16 +46,16 @@ export default class Register extends Component {
 							</div>
 							}
 							<div className="form-group">
-								<input className="form-control" ref={(name) => this.name = name} placeholder="Full Name"/>
+								<input className="form-control" ref={(name) => this.name = name} placeholder="Full Name" autoFocus required/>
 								<i className="zmdi zmdi-account"></i>
 							</div>
 							<div className="form-group">
-								<input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
+								<input className="form-control" ref={(email) => this.email = email} placeholder="Email" required/>
 								<i className="zmdi zmdi-account-circle"></i>
 							</div>
 
 							<div className="form-group">
-								<input type="password" className="form-control" placeholder="Password" ref={(password) => this.password = password} />
+								<input type="password" className="form-control" placeholder="Password" ref={(password) => this.password = password} required />
 								<i className="zmdi zmdi-lock"></i>
 							</div>
 							

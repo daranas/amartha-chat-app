@@ -16,7 +16,15 @@ const Message = ({author, text, date}) => (
 
 const List = ({messages}) => (
   <ul className="list-unstyled">
-    {messages.map(({id, author, text, date}) => <Message key={id} author={author} text={text} date={date} />)}
+    {
+      messages.map(({id, author, text, date}) => {
+        return <Message
+                key={id}
+                author={author}
+                text={text}
+                date={date} />
+      })
+    }
   </ul>
 );
 

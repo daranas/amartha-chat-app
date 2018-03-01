@@ -63,7 +63,8 @@ class Chatroom extends Component {
                 <ChatList 
                 channels={this.state.channels}
                 selectedChannelId={this.state.selected_channel_id}
-                onSelect={this.onChannelSelect} />
+                onSelect={this.onChannelSelect}
+                counter="2" />
               </div>
               <div className="col-md-8 conversation">
                 <ChatMessage messages={this.filteredMessages()} onSendMessage={this.onSendMessage}/>

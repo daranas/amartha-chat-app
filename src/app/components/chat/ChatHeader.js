@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { logout } from '../../helpers/auth';
-import logoWhite from '../../assets/images/logo-white.png';
+import logoWhite from '../../../assets/images/logo-white.png';
 
 export default class ChatHeader extends Component {
   render () {

@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import { login } from '../../helpers/auth';
+import { login } from '../helpers/auth';
 import logoWhite from '../../assets/images/logo-white.png';
 
 function setErrorMsg(error) {
-	return {
+  return {
 		loginMessage: error
 	}
 }
-  
-export default class Login extends Component {
-	state = {
-		loginMessage: null
-	}
 
-	handleSubmit = (e) => {
+class Login extends Component {
+  state = {
+		loginMessage: null
+  }
+  
+  handleSubmit = (e) => {
 		e.preventDefault();
 		login(this.email.value, this.password.value)
 		.catch((error) => {
@@ -21,9 +21,9 @@ export default class Login extends Component {
 				this.setState(setErrorMsg('Invalid username/password.'));
 			}
 		});
-	}
-
-	render () {
+  }
+  
+  render () {
 		return (
 			<div className="row">
 				<div className="hidden-xs hidden-sm col-lg-6 col-md-6 banner">
@@ -70,3 +70,5 @@ export default class Login extends Component {
 		);
 	}
 }
+
+export default Login;

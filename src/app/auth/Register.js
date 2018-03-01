@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { auth } from '../../helpers/auth';
+import { auth } from '../helpers/auth';
 import logoWhite from '../../assets/images/logo-white.png';
 
 function setErrorMsg(error) {
@@ -8,7 +8,7 @@ function setErrorMsg(error) {
 	}
 }
 
-export default class Register extends Component {
+class Register extends Component {
 	state = {
 		registerError: null
 	}
@@ -72,3 +72,5 @@ export default class Register extends Component {
 		);
 	}
 }
+
+export default Register;

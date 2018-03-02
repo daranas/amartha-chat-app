@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import ChatHeader from './ChatHeader';
 import ChatList from './ChatList';
 import ChatMessage from './ChatMessage';
-import { getMessages, getChannels, saveMessage, onNewMessage } from '../../models/chat';
+import { firebaseAuth } from '../../config/constants';
+import { getMessages, getChannels, saveMessage, onNewMessage, getNotif } from '../../models/chat';
 
 class Chatroom extends Component {
 
@@ -20,12 +21,14 @@ class Chatroom extends Component {
   }
 
   componentDidMount() {
+    const user = firebaseAuth().currentUser;
     getMessages().then(messages => this.setState({messages}));
     getChannels().then(channels => this.setState({channels, selected_channel_id: channels[0].id}));
     onNewMessage(new_message => {
       const messages = [...this.state.messages, new_message];
       this.setState({messages});
     });
+    getNotif(user.uid);
   }
 
   onSendMessage(author, text, date) {

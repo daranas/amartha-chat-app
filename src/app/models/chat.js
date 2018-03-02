@@ -1,4 +1,4 @@
-import { database } from '../config/constants';
+import { database, messaging } from '../config/constants';
 let initial_data_loaded = false;
 
 export function getMessages() {
@@ -41,4 +41,13 @@ export function onNewMessage(callback, delay = false) {
       callback(data.val());
     }
   })
+}
+
+export function getNotif(users) {
+  messaging.requestPermission()
+  .then(() => messaging.getToken())
+  .then((token) => {
+    database.ref('users').child(users)
+    .child('token').set(token);
+  }).catch(console.error)
 }

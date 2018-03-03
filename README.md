@@ -1,5 +1,4 @@
 # Amartha Chat App
-================
 
 ### Setup
 
